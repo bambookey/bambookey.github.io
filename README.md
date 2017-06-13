@@ -1,3 +1,4 @@
 # jekyll-simple
 
-##Thanks for the using theme form https://github.com/wild-flame/jekyll-simple/issues
+##My blog
+##Thanks for the theme form https://github.com/wild-flame/
