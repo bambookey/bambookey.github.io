@@ -22,9 +22,9 @@ Simple is a beautiful but functional jekyll theme. The font-type setting looks r
 *italic*
 ```
 
-<del>deletion</del>
+~~deletion~~
 ```
-<del>deletion</del>
+~~deletion~~
 ```
 
 <ins>insertion</ins>
@@ -70,7 +70,7 @@ Simple is a beautiful but functional jekyll theme. The font-type setting looks r
 - list item 1
 - list item 2
 - list item 3
-```
+```html
 - list item 1
 - list item 2
 - list item 3
@@ -79,7 +79,7 @@ Simple is a beautiful but functional jekyll theme. The font-type setting looks r
 1. list item 1
 2. list item 2
 3. list item 3
-```
+```html
 1. list item 1
 2. list item 2
 3. list item 3
@@ -112,23 +112,23 @@ Simple is a beautiful but functional jekyll theme. The font-type setting looks r
 - <span class="purple">purple</span>
 - <span class="maroon">maroon</span>
 ```
-- <span class="black">black</span>
-- <span class="gray">gray</span>
-- <span class="silver">silver</span>
-- <span class="white">white</span>
-- <span class="aqua">aqua</span>
-- <span class="blue">blue</span>
-- <span class="navy">navy</span>
-- <span class="teal">teal</span>
-- <span class="green">green</span>
-- <span class="olive">olive</span>
-- <span class="lime">lime</span>
-- <span class="yellow">yellow</span>
-- <span class="orange">orange</span>
-- <span class="red">red</span>
-- <span class="fuchsia">fuchsia</span>
-- <span class="purple">purple</span>
-- <span class="maroon">maroon</span>
+<span class="black">black</span>
+<span class="gray">gray</span>
+<span class="silver">silver</span>
+<span class="white">white</span>
+<span class="aqua">aqua</span>
+<span class="blue">blue</span>
+<span class="navy">navy</span>
+<span class="teal">teal</span>
+<span class="green">green</span>
+<span class="olive">olive</span>
+<span class="lime">lime</span>
+<span class="yellow">yellow</span>
+<span class="orange">orange</span>
+<span class="red">red</span>
+<span class="fuchsia">fuchsia</span>
+<span class="purple">purple</span>
+<span class="maroon">maroon</span>
 ```
 
 ### Horizontal rule:
