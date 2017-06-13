@@ -70,19 +70,19 @@ Simple is a beautiful but functional jekyll theme. The font-type setting looks r
 - list item 1
 - list item 2
 - list item 3
-```html
-- list item 1
-- list item 2
-- list item 3
+```
+-list item 1
+-list item 2
+-list item 3
 ```
 
 1. list item 1
 2. list item 2
 3. list item 3
-```html
-1. list item 1
-2. list item 2
-3. list item 3
+```
+1.list item 1
+2.list item 2
+3.list item 3
 ```
 
 ### Blockquote:
@@ -147,59 +147,15 @@ Simple is a beautiful but functional jekyll theme. The font-type setting looks r
 
 ### Table:
 
-<table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Age</th>
-			<th>Fruit</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Alex</td>
-			<td>22</td>
-			<td>Apple</td>
-		</tr>
-		<tr>
-			<td>Bran</td>
-			<td>20</td>
-			<td>Orange</td>
-		</tr>
-		<tr>
-			<td>Mike</td>
-			<td>21</td>
-			<td>Waltermelon</td>
-		</tr>
-	</tbody>
-</table>
+| left | center | right |
+| :--- | :----: | ----: |
+| aaaa | bbbbbb | ccccc |
+| a    | b      | c     |
 ```
-<table>
-	<thead>
-		<tr>
-			<th>Name</th>
-			<th>Age</th>
-			<th>Fruit</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Alex</td>
-			<td>22</td>
-			<td>Apple</td>
-		</tr>
-		<tr>
-			<td>Bran</td>
-			<td>20</td>
-			<td>Orange</td>
-		</tr>
-		<tr>
-			<td>Mike</td>
-			<td>21</td>
-			<td>Waltermelon</td>
-		</tr>
-	</tbody>
-</table>
+| left | center | right |
+| :--- | :----: | ----: |
+| aaaa | bbbbbb | ccccc |
+| a    | b      | c     |
 ```
 
 ### Code snippet
