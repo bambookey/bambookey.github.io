@@ -32,3 +32,9 @@ category: project
 2. 依赖管理造成的引用冲突
 
 右键web应用，选择Properties->Deployment Assembly->Add->Java Build Path Entries->选择Jar
+
+#### 对于事务操作的认识
+> Atomic: 保证事务中的所有操作是一个不可分割的单元，成功则全部完成，失败则回滚。
+> Consistency: 保证执行结果与业务逻辑是一致的。典型的有转账的例子，转账之后，总金额要保证不变。通过原子性保证了一致性。
+> Isolation: 多个线程同时操作时，使得不会产生影响。但由于**隔离级别**的不同，会产生不同情况的影响。
+> Durability: 事务执行完毕后，对结果进行持久化。
