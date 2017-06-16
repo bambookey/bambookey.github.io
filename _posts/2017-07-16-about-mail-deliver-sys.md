@@ -26,14 +26,13 @@ category: project
 ### 其他
 #### Eclipse本地启动设置类加载
 这个项目在做的时候我把它建立成了动态web项目，可以用Eclipse在本地进行调试，debug比较容易，下次可以试试将项目转成maven项目，虽然我们的依赖管理和项目构建使用的是ivy+ant.
-
 在本地运行时遇到了类加载失败的问题，就是在IDE内置的tomcat中找不到类，最后通过配置类的加载路径来解决。但记得上一次出现这个问题还有一个原因是ivy引用的包冲突。
 
 从log上来看，归根结底就是未能顺利加载类造成的，至于为什么未能顺利加载，原因就很多了，暂时遇到的原因就是：
 1. Eclipse自启动项目类加载路径的配置问题
 2. 依赖管理造成的引用冲突
 
-右键web应用，选择Properties->Deployment Assembly->Add->Java Build Path Entries->选择Jar
+设置方法：右键web应用，选择Properties->Deployment Assembly->Add->Java Build Path Entries->选择Jar
 
 #### **对于事务操作的认识**
 - **Atomic**: 保证事务中的所有操作是一个不可分割的单元，成功则全部完成，失败则回滚。
