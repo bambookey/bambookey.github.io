@@ -57,4 +57,24 @@ category: project
 
 #### **异常**
 - **业务异常不打印堆栈**：
-- **在离异常发生最近的位置打印堆栈**：
+- **在离异常发生最近的位置打印堆栈**：也可能是最远的地方，但尽量不要对一个异常进行多次堆栈打印。堆栈打印较耗费资源，且打印多个堆栈，不利于寻找真正异常发生的位置。
+
+#### **优雅的关闭线程池**
+- shutdown
+- shutdownNow
+'''java
+private static void shutdownThreadpool(ExecutorService service, String poolName) {
+	service.shutdown();
+	try {
+		if (!service.awaitTermination(60, TimeUnit.SECONDS)) {
+			LOG.warn("threadpool shutdown timeout. poolName:{}", poolName);
+			service.shutdownNow();
+		} else {
+			LOG.info("threadpool shutdown success elegant. poolName:{}", poolName);
+		}
+	} catch (InterruptedException e) {
+		LOG.error("awaitTermination interrupted. poolName:{}", poolName, e);
+		service.shutdownNow();
+	}
+}
+'''
