@@ -62,7 +62,7 @@ category: project
 #### **优雅的关闭线程池**
 - shutdown
 - shutdownNow
-'''java
+```java
 private static void shutdownThreadpool(ExecutorService service, String poolName) {
 	service.shutdown();
 	try {
@@ -77,4 +77,4 @@ private static void shutdownThreadpool(ExecutorService service, String poolName)
 		service.shutdownNow();
 	}
 }
-'''
+```
