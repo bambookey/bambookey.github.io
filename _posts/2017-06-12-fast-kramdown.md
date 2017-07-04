@@ -1,6 +1,3 @@
-<<<<<<< HEAD:_posts/2016-07-03-styles-for-simple.md
-
-=======
 ---
 layout: post
 title:  Fast Styles
