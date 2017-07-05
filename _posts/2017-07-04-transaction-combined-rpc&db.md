@@ -78,14 +78,14 @@ public void removeSingle(MailDelRecord record, String createId) throws ApiExcept
 
 Ps:在实现过程中，踩了一些坑：
 
-- **同一个Service中的非事务方法调用@Transactional的子方法无效**
+**同一个Service中的非事务方法调用@Transactional的子方法无效**
 解决：由于注解型的事务是通过AOP实现的，所以这里要先了解AOP的流程，才能找到问题的原因。
 ![]({{site.baseurl}}/assets/img/spring-aop.png)
 AOP调用的是代理对象而调用Service内的方法则是对目标对象的引用，这就导致了切面的失效，也就没有回滚了。
 - **代理对象**
 - **目标对象**
 
-- **执行失败后不回滚的问题**
-**解决：** 这要从如何实现回滚考虑。DB操作的回滚是要在发生异常时，对异常进行捕获，在catch语句块中执行回滚动作。而Spring的回滚动作的实现，默认是对RuntimeException进行处理，在本项目中使用的是继承自Exception的BizException，故无法对异常进行捕获，因此无法回滚。最后通过对增加 **@Transactional(rollbackFor = Throwable.class)** 来指定回滚的具体类型，这样就实现了在任意类型的异常发生时进行回滚。
+**执行失败后不回滚的问题**
+- **解决：** 这要从如何实现回滚考虑。DB操作的回滚是要在发生异常时，对异常进行捕获，在catch语句块中执行回滚动作。而Spring的回滚动作的实现，默认是对RuntimeException进行处理，在本项目中使用的是继承自Exception的BizException，故无法对异常进行捕获，因此无法回滚。最后通过对增加 **@Transactional(rollbackFor = Throwable.class)** 来指定回滚的具体类型，这样就实现了在任意类型的异常发生时进行回滚。
 
-**收获：** 在自定义业务异常时，要根据实际情况和语义特点选择合适的类进行父类选择。在这里，业务异常的父类选择为RuntimeException无论是从对框架的友好度和语义明确度上都要好于Exception。
+- **收获：** 在自定义业务异常时，要根据实际情况和语义特点选择合适的类进行父类选择。在这里，业务异常的父类选择为RuntimeException无论是从对框架的友好度和语义明确度上都要好于Exception。
