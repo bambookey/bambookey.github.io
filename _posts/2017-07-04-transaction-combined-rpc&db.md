@@ -79,7 +79,7 @@ public void removeSingle(MailDelRecord record, String createId) throws ApiExcept
 Ps:在实现过程中，踩了一些坑：
 
 **同一个Service中的非事务方法调用@Transactional的子方法无效**
-解决：由于注解型的事务是通过AOP实现的，所以这里要先了解AOP的流程，才能找到问题的原因。
+- **解决：** 由于注解型的事务是通过AOP实现的，所以这里要先了解AOP的流程，才能找到问题的原因。
 ![]({{site.baseurl}}/assets/img/spring-aop.png)
 AOP调用的是代理对象而调用Service内的方法则是对目标对象的引用，这就导致了切面的失效，也就没有回滚了。
 - **代理对象**
