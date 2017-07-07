@@ -131,77 +131,7 @@ public class MailSearchBean extends BaseParamBean {
 	private String orderColumn;
 	private String orderTurn = "DESC";
 
-	public Long getDomainId() {
-		return domainId;
-	}
-
-	public void setDomainId(Long domainId) {
-		this.domainId = domainId;
-	}
-
-	public String getTid() {
-		return tid;
-	}
-
-	public void setTid(String tid) {
-		this.tid = tid;
-	}
-
-	public String getMid() {
-		return mid;
-	}
-
-	public void setMid(String mid) {
-		this.mid = mid;
-	}
-
-	public String getMailSubject() {
-		return mailSubject;
-	}
-
-	public void setMailSubject(String mailSubject) {
-		this.mailSubject = mailSubject;
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
-	}
-
-	public Date getStartTime() {
-		return startTime;
-	}
-
-	public void setStartTime(Date startTime) {
-		this.startTime = startTime;
-	}
-
-	public Date getEndTime() {
-		return endTime;
-	}
-
-	public void setEndTime(Date endTime) {
-		this.endTime = endTime;
-	}
-
-	public String getOrderColumn() {
-		return orderColumn;
-	}
-
-	public void setOrderColumn(String orderColumn) {
-		this.orderColumn = orderColumn;
-	}
-
-	public String getOrderTurn() {
-		return orderTurn;
-	}
-
-	public void setOrderTurn(String orderTurn) {
-		this.orderTurn = orderTurn;
-	}
+	//省略getters,setters
 
 }
 
