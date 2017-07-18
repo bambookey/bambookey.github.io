@@ -4,8 +4,6 @@ title:  关于泛型
 category: tech
 ---
 
-**enctype**: encodeType即编码类型，常见有两种：
+1. 泛型类
 
-- **application/x-www-form-urlencoded**
-
-- **multipart/form-data**
+2. 泛型方法
