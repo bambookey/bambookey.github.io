@@ -20,3 +20,6 @@ netstat -anp | grep 19090
 ```
 lsof -i:19090
 ```
+
+
+awk '/^Swap:/ {SWAP+=$2} END {print SWAP" KB"}' /proc/25490/smaps
