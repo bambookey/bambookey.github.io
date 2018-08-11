@@ -55,6 +55,7 @@ jstat -gc 12538 5000
 先不考虑java实例的情况，从Linux系统层级出发，常用的命令就包括：
 top：查看全局情况
 vmstat：查看pageIn/Out，Swap情况，IO，cpu都可以查看，这个命令很好用，不仅仅是用top
+偶然发现Mac下没有vmstat,需要用vm_stat命令代替, 用法相同，vm_stat secondGap
 free：可以查看内存使用情况，不过感觉如果使用了vmstat就没有什么使用的必要了
 
 这里记录几个概念：
