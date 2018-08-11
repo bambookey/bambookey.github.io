@@ -14,7 +14,7 @@ ps -ef | grep tomcat
 最近在使用SpringBoot中需要按端口获取进程，常用的有：
 ```
 netstat -nltp | grep 19090
-netstat -anp | grep 19090
+netstat -anp | grep 19090 | grep -v 192.168
 ```
 和
 ```
