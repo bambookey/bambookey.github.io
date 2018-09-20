@@ -1,6 +1,6 @@
 ---
 layout: post
-title: linux性能常用命令
+title: linux性能分析常用命令
 category: tech
 ---
 
