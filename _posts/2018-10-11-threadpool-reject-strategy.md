@@ -96,9 +96,6 @@ void put(E e) throws InterruptedException; -> 唯一的阻塞
 |----|----|----|
 |    抛异常    | 状态码、超时     |  阻塞    |
 
-poll
-
-take
 
 因此，使用put代替offer就是问题的解决方法了
 
