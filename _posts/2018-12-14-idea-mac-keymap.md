@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IDEA Mac 常用快捷键
+title: IDEA Mac常用快捷键
 category: tech
 ---
 
